@@ -34,6 +34,8 @@ jQuery('.stellarnav').stellarNav({
     scrollbarFix: false // fixes horizontal scrollbar issue on very long navs
   });
 
+
+//   Sticky Header
   $(window).scroll(function(){
     let scroll = $(window).scrollTop();
     let header = $('header');
