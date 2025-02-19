@@ -40,6 +40,25 @@ p{
     margin: 0;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#result{
+    font-size: 13px;
+    color: var(--white);
+    text-align: center;
+    margin-top: 8px;
+}
+
 .top-heading{
     text-align: center;
     margin: 0 auto;
@@ -428,7 +447,7 @@ p{
     font-size: 260px;
     text-transform: uppercase;
     animation: stroke 4s;
-    stroke-width: 1.2px;
+    stroke-width: 1.4px;
     stroke: #2a1454;
     fill: transparent;
     display: inline-block;
@@ -437,17 +456,46 @@ p{
     animation: stroke 4s;
 } 
 
+.stellarnav{ 
+    transition:all 0.3s ease-in-out; 
+}
+
+.stellarnav .menu-toggle span.bars span { 
+    width: 35px; height: 
+    2px; background-color: #fff; 
+    display: block; 
+    margin: 8px auto; 
+    -webkit-transition: all 0.3s ease-in-out; 
+    -o-transition: all 0.3s ease-in-out; 
+    transition: all 0.3s ease-in-out; 
+}
+.stellarnav.active .bars span:nth-child(2){ 
+    opacity:0; 
+}
+.stellarnav.active .bars span:nth-child(1){
+  -webkit-transform: translateY(9px) rotate(45deg);
+  -ms-transform: translateY(9px) rotate(45deg);
+  -o-transform: translateY(9px) rotate(45deg);
+  transform: translateY(9px) rotate(48deg);
+}
+.stellarnav.active .bars span:nth-child(3){
+  -webkit-transform: translateY(-10px) rotate(-45deg);
+  -ms-transform: translateY(-10px) rotate(-45deg);
+  -o-transform: translateY(-10px) rotate(-45deg);
+  transform: translateY(-5px) rotate(-50deg);
+}
+
 @keyframes stroke{
     0% {
         stroke-dashoffset: 25%;
         stroke-dasharray: 0 50%;
-        stroke-width: 1;
+        stroke-width: 1.4;
     }
     
     100% {
         stroke-dashoffset: 100%;
         stroke-dasharray: 100% 0;
-        stroke-width: 1;
+        stroke-width: 1.4;
     }
 }
 
